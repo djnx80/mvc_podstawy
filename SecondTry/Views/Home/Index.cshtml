@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    <p> Proste operacje na tekście przy użyciu JScript i CSS</p>
+
+    <div id="etykiety">
+        <label>Imię:</label>        <br>
+        <label>Nazwisko:</label>    <br>
+        <label>Miasto:</label>
+    </div>
+    <div id="pola">
+        <input type="text" id="textimie" placeholder="Podaj imię" />         <br>
+        <input type="text" id="textnazwisko" placeholder="Podaj nazwisko" /> <br>
+        <input type="text" id="textmiasto" placeholder="Podaj miasto" />
+    </div>
+
+    <div id="przyciski">
+        <!--
+
+
+               <button type="button" value="przycisk_odczyt" onclick="location.href='@Url.Action("Odczytaj","BazaDanych")'" >Odczytaj z bazy</button>
+               <button type="button" value="przycisk_zapis"  onclick="location.href='@Url.Action("Zapisz","BazaDanych")'"   >Zapisz do bazy</button>
+            -->
+    </div>
+
+    <div id="dane">
+        <label>Podane imię:</label>
+        <label id="imie"></label>
+        <br>
+
+        <label>Podane nazwisko:</label>
+        <label id="nazwisko"></label>
+        <br>
+
+        <label>Podane miasto:</label>
+        <label id="miasto"></label>
+    </div>
+
+    <div>
+        <input type="button" id="zmniejszFont" value="Czcionka -1px" />
+        <input type="button" id="zwiekszFont" value="Czcionka +1px" />
+        <input type="color" id="kolorFont" />
+    </div>
+
+</div>

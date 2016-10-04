@@ -1,0 +1,101 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> JScript & CSS </title>
+    <!--	<link rel="stylesheet" href="styles.css" >   -->
+    <!-- CSS -->
+    <style>
+        div {
+            margin: 20px;
+        }
+
+        #etykiety {
+            float: left;
+            font-style: oblique;
+        }
+
+        #pola {
+            float: left;
+        }
+
+        #przyciski {
+            clear: both;
+        }
+
+        #stopka {
+            font-size: 10px;
+        }
+
+        #dane {
+            font-size: 20px;
+            color: black;
+        }
+    </style>
+
+    <!-- JScript -->
+    <script>
+            function aktualizujImie()   {
+                var imie = document.getElementById("textimie").value;
+                document.getElementById("imie").innerHTML = imie;
+            }
+
+            function aktualizujNazwisko()   {
+                var nazwisko = document.getElementById("textnazwisko").value;
+                document.getElementById("nazwisko").innerHTML = nazwisko;
+            }
+
+            function aktualizujMiasto() {
+                var miasto = document.getElementById("textmiasto").value;
+                document.getElementById("miasto").innerHTML = miasto;
+            }
+
+            function zmniejszCzcionke() {
+                var mojeDane = document.getElementById("dane");
+                mojeDane.style.fontSize = 'smaller';
+            }
+            function zwiekszCzcionke(){
+                var mojeDane = document.getElementById("dane");
+                mojeDane.style.fontSize = 'larger';
+            }
+
+            function zmienKolor()   {
+                var nowyKolor = document.getElementById("kolorFont").value;
+                var mojeDane = document.getElementById("dane");
+                mojeDane.style.color = nowyKolor;
+            }
+
+            window.onload = function()  {
+                document.getElementById("textimie").onkeyup = aktualizujImie;
+                document.getElementById("textnazwisko").onkeyup = aktualizujNazwisko;
+                document.getElementById("textmiasto").onkeyup = aktualizujMiasto;
+                document.getElementById("zmniejszFont").onclick = zmniejszCzcionke;
+                document.getElementById("zwiekszFont").onclick = zwiekszCzcionke;
+                document.getElementById("kolorFont").onchange = zmienKolor;
+            }
+    </script>
+
+</head>
+
+<body>
+    <!-- nagłówek (bez menu) -->
+    <header>
+        <h1>JScript & CSS - do pracy</h1>
+    </header>
+
+    <main>
+
+        @RenderBody()
+
+
+    </main>
+
+    <footer id="stopka">
+        <p>  djnx &copy 2016	</p>
+    </footer>
+</body>
+
+</html>
+
+
